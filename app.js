@@ -16,12 +16,12 @@ const siteData = {
         {
             title: "Algebra",
             url: "pdfs/isaacs_algebra.pdf",
-            description: "Solutions to all problems in <it>Algebra: A Graduate Course</it> by Isaacs."
+            description: "Solutions to all problems in <em>Algebra: A Graduate Course</em> by Isaacs."
         },
         {
             title: "Finite Group Theory",
             url: "pdfs/isaacs_fgt.pdf",
-            description: "Solutions to all problems in <it>Finite Group Theory</it> by Isaacs."
+            description: "Solutions to all problems in <em>Finite Group Theory</em> by Isaacs."
         }
     ],
     code: [
