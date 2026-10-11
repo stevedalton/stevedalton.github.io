@@ -1,0 +1,111 @@
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #222;
+    --link-color: #0366d6;
+    --border-color: #eaeaea;
+    --desc-color: #555;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Ensures mobile layout doesn't get squeezed */
+}
+
+button.nav-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--desc-color);
+    cursor: pointer;
+    padding: 0;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+button.nav-btn:hover {
+    color: var(--text-color);
+}
+
+button.nav-btn.active {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+/* Category Sections for Homepage */
+.category-section {
+    margin-bottom: 3.5rem;
+}
+
+.category-title {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item {
+    margin-bottom: 2rem;
+}
+
+.item-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.item-title:hover {
+    text-decoration: underline;
+}
+
+.item-desc {
+    margin-top: 0.4rem;
+    color: var(--desc-color);
+    font-size: 0.95rem;
+}
+
+/* View All Buttons */
+button.view-all-btn {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+button.view-all-btn:hover {
+    color: var(--text-color);
+}
