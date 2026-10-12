@@ -18,8 +18,6 @@ body {
 
 header {
     margin-bottom: 3rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 1rem;
 }
 
 h1 {
@@ -27,46 +25,79 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* Hide the radio inputs that drive the logic */
+input[type="radio"][name="portfolio-tabs"] {
+    display: none;
+}
+
+/* Navigation Styles */
 nav {
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap; /* Ensures mobile layout doesn't get squeezed */
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
 }
 
-button.nav-btn {
-    background: none;
-    border: none;
+label.nav-btn {
     font-size: 1rem;
     color: var(--desc-color);
     cursor: pointer;
-    padding: 0;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-button.nav-btn:hover {
+label.nav-btn:hover {
     color: var(--text-color);
 }
 
-button.nav-btn.active {
+/* Hide all sections by default */
+.content-section {
+    display: none;
+}
+
+/* CSS LOGIC: Show correct section based on checked radio button */
+#tab-home:checked ~ #content-home,
+#tab-writings:checked ~ #content-writings,
+#tab-solutions:checked ~ #content-solutions,
+#tab-code:checked ~ #content-code,
+#tab-blog:checked ~ #content-blog {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* CSS LOGIC: Underline the active nav button */
+#tab-home:checked ~ nav label[for="tab-home"],
+#tab-writings:checked ~ nav label[for="tab-writings"],
+#tab-solutions:checked ~ nav label[for="tab-solutions"],
+#tab-code:checked ~ nav label[for="tab-code"],
+#tab-blog:checked ~ nav label[for="tab-blog"] {
     color: var(--text-color);
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 2px;
 }
 
-/* Category Sections for Homepage */
-.category-section {
-    margin-bottom: 3.5rem;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.category-title {
-    font-size: 1.35rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
+/* About Me Section */
+.about-section {
+    padding: 1.5rem;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    border-left: 4px solid var(--link-color);
 }
 
+.about-section p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* List Styles */
 .item-list {
     list-style-type: none;
     padding: 0;
@@ -91,21 +122,4 @@ button.nav-btn.active {
     margin-top: 0.4rem;
     color: var(--desc-color);
     font-size: 0.95rem;
-}
-
-/* View All Buttons */
-button.view-all-btn {
-    background: none;
-    border: none;
-    color: var(--link-color);
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 0;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-button.view-all-btn:hover {
-    color: var(--text-color);
 }

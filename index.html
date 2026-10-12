@@ -3,25 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math, Code & Running</title>
+    <title>Stevie D's interests</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Portfolio & Blog</h1>
-        <nav>
-            <button class="nav-btn active" data-target="home">Home</button>
-            <button class="nav-btn" data-target="writings">Math Writings</button>
-            <button class="nav-btn" data-target="solutions">Solutions</button>
-            <button class="nav-btn" data-target="code">Code</button>
-            <button class="nav-btn" data-target="blog">Blog</button>
-        </nav>
+        <h1>My Portfolio & Posts</h1>
     </header>
 
-    <main id="content-container">
-        <!-- Content will be injected here by app.js -->
-    </main>
+    <main>
+        <!-- HIDDEN RADIO BUTTONS FOR TAB LOGIC -->
+        <input type="radio" id="tab-home" name="portfolio-tabs" checked>
+        <input type="radio" id="tab-writings" name="portfolio-tabs">
+        <input type="radio" id="tab-solutions" name="portfolio-tabs">
+        <input type="radio" id="tab-code" name="portfolio-tabs">
+        <input type="radio" id="tab-blog" name="portfolio-tabs">
 
-    <script src="app.js"></script>
+        <!-- NAVIGATION -->
+        <nav>
+            <label for="tab-home" class="nav-btn">Home</label>
+            <label for="tab-writings" class="nav-btn">Math Writings</label>
+            <label for="tab-solutions" class="nav-btn">Solutions</label>
+            <label for="tab-code" class="nav-btn">Code</label>
+            <label for="tab-blog" class="nav-btn">Blog</label>
+        </nav>
+
+        <!-- HOME SECTION -->
+        <section id="content-home" class="content-section">
+            <div class="about-section">
+                <p>Hi! I'm a software developer and mathematics enthusiast based in the Pittsburgh area. This site is a collection of my math writings and personal code. Outside of work, I like to run, bake bread and pizza, play video games, or spend time with my family. I might write about all (or none!) of these here.</p>
+            </div>
+        </section>
+
+        <!-- MATH WRITINGS SECTION -->
+        <section id="content-writings" class="content-section">
+            <ul class="item-list">
+                <!-- ADD NEW MATH WRITINGS HERE -->
+                
+                <li class="item">
+                    <a href="pdfs/cobordism.pdf" class="item-title" target="_blank" rel="noopener noreferrer">3-manifold cobordism</a>
+                    <p class="item-desc">It's a classic result that every closed orientable 3-manifold bounds a 4-manifold; the proof I've always known used Dehn surgeries. A while ago on MathOverflow I saw the idea of using cohomology classes, so I wrote up the details.</p>
+                </li>
+                
+                <li class="item">
+                    <a href="pdfs/s2_bundles.pdf" class="item-title" target="_blank" rel="noopener noreferrer">Sphere bundles</a>
+                    <p class="item-desc">The classic example of two non-homotopic manifolds with the same homotopy/homology/cohomology groups comes from Lens spaces in dimension 3, but the actual math behind proving all of this is somewhat complicated. I saw a much simpler example in one dimension higher on MathOverflow, so I wrote up the details in this very short note.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- SOLUTIONS SECTION -->
+        <section id="content-solutions" class="content-section">
+            <ul class="item-list">
+                <!-- ADD NEW SOLUTIONS HERE -->
+                
+                <li class="item">
+                    <a href="pdfs/isaacs_algebra.pdf" class="item-title" target="_blank" rel="noopener noreferrer">Algebra</a>
+                    <p class="item-desc">Solutions to all problems in <em>Algebra: A Graduate Course</em> by Isaacs.</p>
+                </li>
+                
+                <li class="item">
+                    <a href="pdfs/isaacs_fgt.pdf" class="item-title" target="_blank" rel="noopener noreferrer">Finite Group Theory</a>
+                    <p class="item-desc">Solutions to all problems in <em>Finite Group Theory</em> by Isaacs.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CODE SECTION (Currently Empty) -->
+        <section id="content-code" class="content-section">
+            <!-- WHEN ADDING CODE PROJECTS, DELETE THIS "COMING SOON" DIV AND REPLACE IT WITH A <ul class="item-list"> -->
+            <div style="text-align: center; padding: 3rem 1rem;">
+                <h2 style="margin-bottom: 1rem; color: var(--text-color);">Coming Soon!</h2>
+                <p style="color: var(--desc-color);">I'm currently working on adding content to this section. Check back later.</p>
+            </div>
+            
+            <!-- ADD NEW CODE PROJECTS HERE -->
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section id="content-blog" class="content-section">
+           <!-- WHEN ADDING BLOG POSTS, DELETE THIS "COMING SOON" DIV AND REPLACE IT WITH A <ul class="item-list"> -->
+            <div style="text-align: center; padding: 3rem 1rem;">
+                <h2 style="margin-bottom: 1rem; color: var(--text-color);">Coming Soon!</h2>
+                <p style="color: var(--desc-color);">I'm currently working on adding content to this section. Check back later.</p>
+            </div>
+
+            <!-- ADD NEW POSTS HERE -->
+        </section>
+
+    </main>
 </body>
 </html>
