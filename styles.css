@@ -123,3 +123,31 @@ label.nav-btn:hover {
     color: var(--desc-color);
     font-size: 0.95rem;
 }
+
+/* Status Badges */
+.badge-in-progress {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background-color: #fff8e1;
+    border: 1px solid #ebd0a0;
+    color: #8c6a2c;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -2px; /* Slight optical adjustment to align beautifully with the title */
+}
+
+/* The small colored dot */
+.badge-in-progress::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #dca337;
+    border-radius: 50%;
+}
